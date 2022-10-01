@@ -1,5 +1,3 @@
 import { categoriesRoutes } from "./categories.routes";
 
-export {
-    categoriesRoutes
-}
+export { categoriesRoutes };
