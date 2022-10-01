@@ -3,7 +3,7 @@ import { ListSpecificationsController } from "./listSpecificationsController";
 import { ListSpecificationsUseCase } from "./listSpecificationsUseCase";
 
 const listSpecificationsController = new ListSpecificationsController(
-  new ListSpecificationsUseCase(new SpecificationsRepository())
+  new ListSpecificationsUseCase(SpecificationsRepository.getInstance())
 );
 
 export { listSpecificationsController };
