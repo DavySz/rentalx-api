@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "pre-commit": "yarn lint && yarn check-ts",
+    "commit-msg": "npx commitlint --edit "
+  }
+}
