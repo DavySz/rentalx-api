@@ -55,7 +55,8 @@
     "import/no-extraneous-dependencies": [
       "error",
       { "devDependencies": ["**/*.spec.js"] }
-    ]
+    ],
+    "no-use-before-define": "off"
   },
   "settings": {
     "import/resolver": {
