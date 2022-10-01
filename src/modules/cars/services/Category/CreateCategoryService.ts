@@ -1,4 +1,4 @@
-import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
+import { ICategoriesRepository } from "../../repositories/Category/ICategoriesRepository";
 
 interface IRequest {
   name: string;
