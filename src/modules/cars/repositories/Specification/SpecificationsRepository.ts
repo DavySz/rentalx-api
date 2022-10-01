@@ -5,7 +5,20 @@ import {
 } from "./ISpecificationsRepository";
 
 export class SpecificationsRepository implements ISpecificationsRepository {
+  private constructor() {
+    this.specifications = [];
+  }
+
   private specifications: Specification[];
+
+  private static INSTANCE: SpecificationsRepository;
+
+  public static getInstance(): SpecificationsRepository {
+    if (!SpecificationsRepository.INSTANCE) {
+      SpecificationsRepository.INSTANCE = new SpecificationsRepository();
+    }
+    return SpecificationsRepository.INSTANCE;
+  }
 
   create({ description, name }: ICreateSpecificationDTO): void {
     const specification = new Specification();
@@ -17,10 +30,6 @@ export class SpecificationsRepository implements ISpecificationsRepository {
     });
 
     this.specifications.push(specification);
-  }
-
-  constructor() {
-    this.specifications = [];
   }
 
   findByName(name: string): Specification {
