@@ -1,5 +1,7 @@
 import { container } from "tsyringe";
 
+import { IUsersRepositories } from "../../modules/accounts/repositories/IUsersRepository";
+import { UsersRepository } from "../../modules/accounts/repositories/UsersRepository";
 import { CategoriesRepository } from "../../modules/cars/repositories/Category/CategoriesRepository";
 import { ICategoriesRepository } from "../../modules/cars/repositories/Category/ICategoriesRepository";
 import { ISpecificationsRepository } from "../../modules/cars/repositories/Specification/ISpecificationsRepository";
@@ -13,4 +15,9 @@ container.registerSingleton<ICategoriesRepository>(
 container.registerSingleton<ISpecificationsRepository>(
   "SpecificationsRepository",
   SpecificationsRepository
+);
+
+container.registerSingleton<IUsersRepositories>(
+  "UsersRepository",
+  UsersRepository
 );
